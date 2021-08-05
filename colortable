@@ -2,12 +2,15 @@
 
 clear
 
-for background in black red green yellow blue magenta cyan white
-do
-	for foreground in black red green yellow blue magenta cyan white
+for etc in "" "--half-bright on" "--bold on"
+done
+	for background in black red green yellow blue magenta cyan white
 	do
-		setterm --background $background --foreground $foreground --half-bright on --bold on
-		echo -n "+"
+		for foreground in black red green yellow blue magenta cyan white
+		do
+			setterm --background $background --foreground $foreground $etc
+			echo -n "+"
+		done
 	done
 done
 
