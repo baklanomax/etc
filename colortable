@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-colors = "black red green yellow blue magenta cyan white"
+colors="black red green yellow blue magenta cyan white"
 
 clear
 
 for etc in "" "--half-bright on" "--bold on"
-done
+do
 	for background in $colors
 	do
 		for foreground in $colors
