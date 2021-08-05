@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 for background in black red green yellow blue magenta cyan white
+do
 	for foreground in black red green yellow blue magenta cyan white
-
-		setterm --background green --foreground green --half-bright on --bold on
-
-
+	do
+		setterm --background $background --foreground $foreground --half-bright on --bold on
+		echo "+"
+	done
+done
