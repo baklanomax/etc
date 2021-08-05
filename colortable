@@ -10,3 +10,5 @@ do
 		echo -n "+"
 	done
 done
+
+setterm --default
