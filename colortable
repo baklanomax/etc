@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+clear
+
 for background in black red green yellow blue magenta cyan white
 do
 	for foreground in black red green yellow blue magenta cyan white
