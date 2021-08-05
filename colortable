@@ -4,11 +4,11 @@ colors="black red green yellow blue magenta cyan white"
 
 clear
 
-for bold in "off" "on"
+for background in $colors
 do
-	for background in $colors
+	for foreground in $colors
 	do
-		for foreground in $colors
+		for bold in off on
 		do
 			setterm --background $background --foreground $foreground --bold $bold
 			echo -n "test"
