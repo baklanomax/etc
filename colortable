@@ -5,6 +5,6 @@ do
 	for foreground in black red green yellow blue magenta cyan white
 	do
 		setterm --background $background --foreground $foreground --half-bright on --bold on
-		echo "+"
+		echo -n "+"
 	done
 done
