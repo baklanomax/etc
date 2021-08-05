@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-setterm --foreground green --bold on --store --clear reset
+for background in black red green yellow blue magenta cyan white
+	for foreground in black red green yellow blue magenta cyan white
+
+		setterm --background green --foreground green --half-bright on --bold on
+
+
