@@ -11,7 +11,7 @@ do
 		for foreground in $colors
 		do
 			setterm --background $background --foreground $foreground --bold $bold
-			echo -n "+"
+			echo -n "test"
 		done
 	done
 done
