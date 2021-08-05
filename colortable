@@ -4,13 +4,13 @@ colors="black red green yellow blue magenta cyan white"
 
 clear
 
-for etc in "" "--half-bright on" "--bold on"
+for bold in "off" "on"
 do
 	for background in $colors
 	do
 		for foreground in $colors
 		do
-			setterm --background $background --foreground $foreground $etc
+			setterm --background $background --foreground $foreground --bold $bold
 			echo -n "+"
 		done
 	done
