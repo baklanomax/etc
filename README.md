@@ -4,4 +4,4 @@
 3. rm v0.1.tar.gz
 4. cd etc-0.1/
 5. chmod +x colortable
-6. sudo ./colortable
+6. ./colortable
