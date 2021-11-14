@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+apt update
+apt -y upgrade
+apt -y install bc bison dwarves flex make libelf-dev libssl-dev
+apt -y autoremove
+
+cd /usr/src/
+rm -r *
+wget https://github.com/baklanomax/linux/archive/refs/tags/v5.15-fixkeys.tar.gz
+tar -zxf v5.15-fixkeys.tar.gz
+rm v5.15-fixkeys.tar.gz
+mv linux-5.15-fixkeys/ linux/
+cd linux/
+
+make olddefconfig
+sed -i "s/CONFIG_BUILD_SALT.*/CONFIG_BUILD_SALT=\"5.15\"/; s/CONFIG_SYSTEM_TRUSTED_KEYS.*/CONFIG_SYSTEM_TRUSTED_KEYS=\"\"/" .config
+make -j $(nproc)
+make INSTALL_MOD_STRIP=1 modules_install
+make install
+
+cd ..
+rm -r *
+
+echo -e "\n\n\nУстановка ядра успешно завершена."
