@@ -13,11 +13,9 @@ rm v2.4.0-mod.tar.gz
 mv kbd-2.4.0-mod/ kbd/
 cd kbd/
 
-make olddefconfig
-sed -i "s/CONFIG_BUILD_SALT.*/CONFIG_BUILD_SALT=\"5.15\"/; s/CONFIG_SYSTEM_TRUSTED_KEYS.*/CONFIG_SYSTEM_TRUSTED_KEYS=\"\"/" .config
-make -j $(nproc)
-make INSTALL_MOD_STRIP=1 modules_install
-make install
+./autogen.sh
+./configure
+make
 
 cd ..
 rm -r *
