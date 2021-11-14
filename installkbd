@@ -2,7 +2,7 @@
 
 apt update
 apt -y upgrade
-apt -y install bc bison dwarves flex make libelf-dev libssl-dev
+apt -y install autopoint bison flex libpam0g-dev libtool make
 apt -y autoremove
 
 cd /usr/src/
@@ -22,4 +22,4 @@ make install
 cd ..
 rm -r *
 
-echo -e "\n\n\nУстановка ядра успешно завершена."
+echo -e "\n\n\nУстановка kbd успешно завершена."
