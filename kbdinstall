@@ -16,8 +16,9 @@ cd kbd/
 ./autogen.sh
 ./configure
 make
+make install-strip
 
-#cd ..
-#rm -r *
+cd ..
+rm -r *
 
-#echo -e "\n\n\nУстановка kbd успешно завершена."
+echo -e "\n\n\nУстановка kbd успешно завершена."
