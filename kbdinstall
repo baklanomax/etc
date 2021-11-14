@@ -2,7 +2,7 @@
 
 apt update
 apt -y upgrade
-apt -y install autopoint bison flex libpam0g-dev libtool make
+apt -y install autopoint bison flex gettext libpam0g-dev libtool make
 apt -y autoremove
 
 cd /usr/src/
