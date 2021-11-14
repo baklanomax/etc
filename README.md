@@ -3,5 +3,5 @@
 2. tar -zxf v0.1.tar.gz
 3. rm v0.1.tar.gz
 4. cd etc-0.1/
-5. chmod +x colortable
-6. ./colortable
+5. chmod +x script
+6. ./script
