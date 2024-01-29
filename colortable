@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+colors="black red green yellow blue magenta cyan white"
+
+clear
+
+for background in $colors
+do
+	for foreground in $colors
+	do
+		for bold in off on
+		do
+			setterm --background $background --foreground $foreground --bold $bold
+			echo -n "test"
+		done
+	done
+done
+
+setterm --default
